@@ -32,6 +32,16 @@
   margin: 0;
 }
 
+#top-section{
+ display: flex;
+ padding-bottom: 20px;
+ border-bottom-style: solid;
+ border-bottom-color: black;
+ border-bottom-width: 2px;
+ padding-left: 4px;
+ padding-right:4px;
+}
+
 #pfp-name-div{
   display: flex;
   flex-direction: row;
@@ -46,7 +56,7 @@
   box-shadow: inset -1px -1px #fff, inset 1px 1px grey, 
   inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
   margin-top: 8px;
-  margin-left: 16px;
+  margin-left: 10px;
   
 }
 
