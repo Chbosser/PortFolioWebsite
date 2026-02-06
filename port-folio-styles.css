@@ -42,7 +42,7 @@
  padding-right:4px;
 }
 
-#pfp-name-div{
+#personal-info-div{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -60,11 +60,19 @@
   
 }
 
+#name-info-div{
+  margin-left:10px;
+}
+
 #name-text{
   margin: 0;
   font-size: 20px;
-  margin-left: 10px;
   margin-top:54px; 
+}
+
+#location-text{
+  margin: 0;
+  font-size: 20px;
 }
 
 #about-me-div{
