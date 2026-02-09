@@ -7,8 +7,13 @@
   padding: 6px;
   position: fixed;
   font-family: DotGothic16;
+  
 }
 
+#content{
+  padding:10px;
+
+}
 #stars{
   width: 100%;
   background-color: navy; 
@@ -38,16 +43,13 @@
  border-bottom-style: solid;
  border-bottom-color: black;
  border-bottom-width: 2px;
- padding-left: 4px;
- padding-right:4px;
 }
 
 #personal-info-div{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   margin:0;
-  margin-top: 8px;
 }
 
 #pfp{
@@ -55,8 +57,7 @@
   background-color: #fff;
   box-shadow: inset -1px -1px #fff, inset 1px 1px grey, 
   inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
-  margin-top: 8px;
-  margin-left: 10px;
+  
   
 }
 
@@ -67,13 +68,32 @@
 #name-text{
   margin: 0;
   font-size: 20px;
-  margin-top:54px; 
+  margin-top:0px; 
 }
 
 #location-text{
   margin: 0;
-  font-size: 20px;
+  font-size: 14px;
 }
+
+#linkedin-icon{
+  height: 16px;
+  display: block;
+  margin-top: 2.5px;
+  margin-left: 6px;
+  margin-right: 1px;
+}
+
+#email-icon{
+  height: 22px;
+  display: block;
+}
+
+#location-contact{
+  display: flex;
+  flex-direction: row;
+}
+
 
 #about-me-div{
   margin-left:16px;
