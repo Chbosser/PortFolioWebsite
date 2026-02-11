@@ -1,3 +1,21 @@
+
+@font-face{
+  font-family: 'Pixelated MS Sans Serif';
+  src: url(assets/ms-sans-serif-1.otf.woff2);
+  font-weight:normal;
+  font-style: normal;
+}
+
+button{
+  background: silver;
+  border: none;
+  border-radius: 0;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  box-sizing: border-box;
+}
+
+
+
 #window{
   height:98.8vh;
   width: 700px;
@@ -6,17 +24,20 @@
   inset -4px -4px grey, inset 4px 4px #fff;
   padding: 6px;
   position: fixed;
-  font-family: DotGothic16;
+  font-family: Pixelated MS Sans Serif;
+  -webkit-font-smoothing: none;
   
 }
 
 #content{
-  padding:10px;
+  padding:18px;
 
 }
+
 #stars{
   width: 100%;
-  background-color: navy; 
+  background: #100783;
+background: linear-gradient(180deg,rgba(16, 7, 131, 1) 26%, rgba(59, 132, 209, 1) 90%);
 }
 
 #title-bar{
@@ -26,15 +47,57 @@
   justify-content: space-between;
   padding: 3px 2px 3px 3px;
   height: 20px;
-
 }
 
 #title-text{
-  font-family: DotGothic16;
-  font-size: 18px;
+  font-family: Pixelated MS Sans Serif;
+  font-size: 16px;
   color: white;
-  padding:3px;
+  padding:4px;
   margin: 0;
+  letter-spacing: 1px; 
+  font-weight:600;
+}
+
+#title-bar-controls{
+  display: flex;
+  justify-content: space-between;
+}
+#title-bar-controls button {
+    height: 18px;
+    width:20px;
+    padding: 0;
+    
+}
+
+#minimize-button{
+  background-image: url(icons/minimize-icon.svg);
+  background-position: bottom 3px left 5px;
+  background-repeat: no-repeat;
+  margin-left: 2px;
+  background-size: 40%;
+}
+
+#maximize-button{
+  background-image: url(icons/maximize-icon.svg);
+  background-position: top 3px left 4px;
+  background-repeat: no-repeat;
+  
+  background-size: 55%;
+}
+
+#close-button{
+  background-image: url(icons/close-icon.svg);
+  background-position: top 4px left 4px;
+  background-repeat: no-repeat;
+  margin-left: 4px;
+  background-size: 50%;
+  margin-right: 2px;
+}
+
+button:active{
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+    text-shadow: 1px 1px #222;
 }
 
 #top-section{
@@ -49,10 +112,14 @@
   flex-direction: row;
   align-items: flex-end;
   margin:0;
+  margin-top: 2px;
 }
 
 #pfp{
-  width: 70px;
+  margin-bottom: 4px;
+  object-fit: contain;
+  width: 120px;
+  height: 120px;
   background-color: #fff;
   box-shadow: inset -1px -1px #fff, inset 1px 1px grey, 
   inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
@@ -66,13 +133,19 @@
 
 #name-text{
   margin: 0;
-  font-size: 20px;
+  font-size: 22px;
   margin-top:0px; 
 }
 
 #location-text{
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
+  height: 20px;
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+  margin-bottom: 4px;
+  margin-left: 2px;
 }
 
 #linkedin-icon{
@@ -91,18 +164,24 @@
 #location-contact{
   display: flex;
   flex-direction: row;
+  align-items: flex-end;s
 }
 
 
 #about-me-div{
-  margin-left:16px;
-  margin-right:16px;
   margin-top:16px;
 }
 
 #about-me-title{
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
+  display: flex;
+}
+
+#info-img{
+  height: 24px;
+  margin-right: 8px;
+  margin-left: 4px;
 }
 
 #about-me-text{
@@ -117,7 +196,6 @@
 
 .divider{
   margin-left: 1px;
-  margin-right: 1px;
   display: flex;
   height: 1px;
 
