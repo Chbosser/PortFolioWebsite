@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christian Farias Portfolio</title>
+    <link rel="stylesheet" href="port-folio-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=DotGothic16&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas class="stars"></canvas>
+    <div id="window">
+      <!--Div that houses the grey part-->
+      <header id="title-bar">
+        <!--Header that has the window title-bar-->
+        <p id="title-text">Christian Farias Portfolio Webpage</p>
+        <div id="title-bar-controls">
+          <button id="minimize-button"></button>
+          <button id="maximize-button"></button>
+          <button id="close-button"></button>
+        </div>
+      </header>
+      <main>
+        <section id="content">
+          <div id="top-section">
+            <!--Div that contains the top section (pfp picture name town email and linked in )-->
+            <h1 id="personal-info-div">
+              <img src="images/account.svg" id="pfp" />
+              <div id="name-info-div">
+                <p id="name-text">Christian Farias</p>
+                <div id="location-contact">
+                  <p id="location-text">Annandale,VA</p>
+                  <a
+                    href="https://www.linkedin.com/in/christian-farias-8b27232b1/"
+                    target="_blank"
+                    style="
+                      height: 18px;
+                      width: 18px;
+                      margin-top: 2.5px;
+                      margin-left: 6px;
+                      margin-right: 2px;
+                      margin-bottom: 3.5px;
+                    "
+                  >
+                    <img src="images/linkedin-icon-2.png" id="linkedin-icon" />
+                  </a>
+                  <a href="mailto:fariasc@cua.edu" target="_blank">
+                    <img src="images/Letter.ico" id="email-icon" />
+                  </a>
+                </div>
+              </div>
+            </h1>
+          </div>
+          <div class="divider" id="divider-1"></div>
+          <!--Div that serves as bottom border -->
+          <section id="about-me-div">
+            <h1 id="about-me-title">
+              <img src="images/info.png" id="info-img" />
+              About Me
+            </h1>
+            <p id="about-me-text">I’m a Computer Science major with a strong passion for web development
+               and UI design. I enjoy building responsive, user-focused applications that combine clean 
+               code with thoughtful visual design. My interests lie in creating intuitive digital experiences 
+               and continuously improving my skills by exploring new technologies, frameworks, and design principles</p>
+          </section>
+          <section id="tech-div"> <!--Technologies Section-->
+            <h2 id="tech-title"> <!--Technologies title-->
+              <img src="images/computer_explorer_2k-2.png" alt="desktop computer icon" id="tech-img">
+              Technologies
+            <h2>
+            <div id="tech-grid"> <!--Technologies Grid-->
+              <div>
+              <img src="images/html logo.png" alt="html logo" >
+              <p>HTML5</p>
+              </div>
+              <div>
+                <img src="images/css logo.png" alt="css logo">
+                <p>CSS3</p>
+              </div>
+              <div>
+                <img src="images/java logo.png" alt="java logo">
+                <p>Java</p>
+              </div>
+              <div>
+                <img src="images/git logo.webp" alt="git logo">
+                <p>Git</p>
+              </div>
+              <div>
+                <img src="images/sql logo.png" alt="sql logo">
+                <p>SQL</p>
+              </div>
+              <div>
+                <img src="images/react logo.png" alt="react logo">
+                <p>React</p>
+              </div>
+            </div>
+          </section>
+          <section id="projects-section"> <!--Projects Section-->
+            <h3 id="projects-title"> 
+              <img src="images/projects.png" alt="folder icon" id="project-icon">
+              Projects
+            </h3>
+            <div id="projects">
+
+              <div id="cardinal-calendar-div" class="project-div">
+                <a href="https://github.com/Chbosser/CardinalCalendar_CSC363Project" target="_blank">
+                <img src="images/cardinal-calendar.png" alt="cardinal calendar div project" id="cardinal-calendar-img" class="project-img">
+                </a>
+              
+                <div class="project-description">
+                  <p class="project-title">
+                    Cardinal Calendar
+                  </p>
+                  <p class="project-info">
+                    An AI powered Course Planner
+                  </p>
+                </div>
+              </div>
+
+              <div id="portfolio-website-div" class="project-div">
+                <a href="https://github.com/Chbosser/PortFolioWebsite" target="_blank">
+                  <img src="images/portfolio-website.png" alt="portfolio website" id="portfolio-website-img" class="project-img">
+                </a>
+                <div class="project-description">
+                  <p class="project-title">
+                    Portfolio Website
+                  </p>
+                  <p class="project-info">
+                    This Webpage!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer> <!--Footer Even-->
+            <!-- <div class="divider" id="divider-2"></div> -->
+            <section id="bottom-section"> <!--Bottom Section-->
+              <form action="assets/Christian Farias_RESUME.docx.pdf" target="_blank">
+                <button type="submit" id="resume-button">Resume</button>
+              </form>
+            </section>
+          </footer>
+        </section>
+      </main>
+    </div>
+    <canvas class="stars"></canvas>
+  </body>
+</html>
