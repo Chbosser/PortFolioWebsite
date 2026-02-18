@@ -11,6 +11,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   padding: 0;
   margin: 0;
+  min-width: 1fr;
 }
 
 button{
@@ -90,7 +91,7 @@ background: linear-gradient(180deg,rgba(16, 7, 131, 1) 26%, rgba(59, 132, 209, 1
 }
 
 #minimize-button{
-  background-image: url(icons/minimize-icon.svg);
+  background-image: url(images/minimize-icon.svg);
   background-position: bottom 3px left 5px;
   background-repeat: no-repeat;
   margin-left: 2px;
@@ -98,7 +99,7 @@ background: linear-gradient(180deg,rgba(16, 7, 131, 1) 26%, rgba(59, 132, 209, 1
 }
 
 #maximize-button{
-  background-image: url(icons/maximize-icon.svg);
+  background-image: url(images/maximize-icon.svg);
   background-position: top 3px left 4px;
   background-repeat: no-repeat;
   
@@ -106,7 +107,7 @@ background: linear-gradient(180deg,rgba(16, 7, 131, 1) 26%, rgba(59, 132, 209, 1
 }
 
 #close-button{
-  background-image: url(icons/close-icon.svg);
+  background-image: url(images/close-icon.svg);
   background-position: top 4px left 4px;
   background-repeat: no-repeat;
   margin-left: 4px;
@@ -229,7 +230,13 @@ button:active{
   row-gap: 28px;
   column-gap: 100px;
   justify-content: center;
+}
 
+@media (max-width: 700px) {
+    #tech-grid{
+      grid-template-columns: 80px 80px;
+      grid-template-rows:  80px 80px 80px;
+    }
 }
 
 #tech-grid div{
