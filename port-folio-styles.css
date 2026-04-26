@@ -28,7 +28,7 @@ button:hover{
 
 main {
   flex: 1;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 
