@@ -1,75 +1,65 @@
-function getRandomInt(min, max) {
-  const minCeiled = Math.ceil(min);
-  const maxFloored = Math.floor(max);
-  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
 }
 
-function draw1() {
+function setupStarCanvas(canvasId, starCount = 60) {
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext("2d");
 
-  const canvas=document.getElementById("canvas-1");
-  const ctx=canvas.getContext("2d");
-  const rect =canvas.getBoundingClientRect();
+  let stars = [];
 
-  horz=rect.width;
-  vert=rect.height;
+  function resizeCanvas() {
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
 
-  console.log(horz);
-  console.log(vert);
+    stars = [];
 
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
+    for (let i = 0; i < starCount; i++) {
+      stars.push({
+        x: getRandom(0, canvas.width),
+        y: getRandom(0, canvas.height),
+        radius: getRandom(0.5, 1.8),
 
-
-
-  for (let i=0; i<60;i++){
-
-    ctx.fillStyle="rgb(255, 255, 255)";
-
-    ctx.beginPath();
-    const x = getRandomInt(0,horz);
-    const y= getRandomInt(0,vert);
-    const radius=getRandomInt(1,4)/2;
-
-    ctx.arc(x,y,radius,0,Math.PI * 2, true);
-
-    ctx.fill();
+        alpha: getRandom(0.3, 1),
+        speed: getRandom(0.009, 0.02),
+        direction: Math.random() > 0.5 ? 1 : -1
+      });
+    }
   }
-}
 
-function draw2() {
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  const canvas=document.getElementById("canvas-2");
-  const ctx=canvas.getContext("2d");
-  const rect =canvas.getBoundingClientRect();
+    for (const star of stars) {
+      star.alpha += star.speed * star.direction;
 
-  horz=rect.width;
-  vert=rect.height;
+      if (star.alpha >= 1) {
+        star.alpha = 1;
+        star.direction = -1;
+      }
 
-  console.log(horz);
-  console.log(vert);
+      if (star.alpha <= 0.2) {
+        star.alpha = 0.2;
+        star.direction = 1;
+      }
 
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
+      ctx.fillStyle = `rgba(255,255,255,${star.alpha})`;
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
 
-
-
-  for (let i=0; i<60;i++){
-
-    ctx.fillStyle="rgb(255, 255, 255)";
-
-    ctx.beginPath();
-    const x = getRandomInt(0,horz);
-    const y= getRandomInt(0,vert);
-    const radius=getRandomInt(1,4)/2;
-
-    ctx.arc(x,y,radius,0,Math.PI * 2, true);
-
-    ctx.fill();
+    requestAnimationFrame(animate);
   }
+
+  resizeCanvas();
+  animate();
+
+  window.addEventListener("resize", resizeCanvas);
 }
 
-draw1();
-draw2();
+setupStarCanvas("canvas-1", 60);
+setupStarCanvas("canvas-2", 60);
 
 // Project Stardust
 // No for loops I'll have to use setInterval() timeout and Animation Frames
