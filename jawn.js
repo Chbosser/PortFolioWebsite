@@ -103,7 +103,7 @@ document.getElementById("minimize-button").addEventListener("click", () => {
 
 function runEasterEgg() {
   const haloTheme = new Audio("assets/halo_theme_shortmp3.mp3");
-  haloTheme.volume=0.1;
+  haloTheme.volume=0.2;
   haloTheme.play();
 
   const img = document.createElement("img");
