@@ -18,7 +18,7 @@ function setupStarCanvas(canvasId, starCount = 60) {
       stars.push({
         x: getRandom(0, canvas.width),
         y: getRandom(0, canvas.height),
-        radius: getRandom(0.5, 2.2),
+        radius: getRandom(0.5, 2.5),
 
         alpha: getRandom(0.3, 1),
         speed: getRandom(0.009, 0.02),
