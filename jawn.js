@@ -61,6 +61,64 @@ function setupStarCanvas(canvasId, starCount = 60) {
 setupStarCanvas("canvas-1", 60);
 setupStarCanvas("canvas-2", 60);
 
+// EASTER EGG (Halo perhaps)
+
+
+
+const correctOrder = [
+  "maximize",
+  "close",
+  "minimize",
+  "minimize",
+  "close",
+  "maximize"
+];
+
+let clickedOrder = [];
+
+function checkEasterEgg(buttonName) {
+  clickedOrder.push(buttonName);
+
+  if (clickedOrder.length > correctOrder.length) {
+    clickedOrder.shift();
+  }
+
+  if (JSON.stringify(clickedOrder) === JSON.stringify(correctOrder)) {
+    runEasterEgg();
+    clickedOrder = [];
+  }
+}
+
+document.getElementById("maximize-button").addEventListener("click", () => {
+  checkEasterEgg("maximize");
+});
+
+document.getElementById("close-button").addEventListener("click", () => {
+  checkEasterEgg("close");
+});
+
+document.getElementById("minimize-button").addEventListener("click", () => {
+  checkEasterEgg("minimize");
+});
+
+function runEasterEgg() {
+  const haloTheme = new Audio("assets/halo_theme_shortmp3.mp3");
+  haloTheme.volume=0.1;
+  haloTheme.play();
+
+  const img = document.createElement("img");
+  img.src = "images/halo_ring_8bit.png";
+  img.id = "easter-egg-image";
+  document.body.appendChild(img);
+
+  setTimeout(() => {
+    img.classList.add("fade-out");
+  }, 47000);
+
+  setTimeout(() => {
+    img.remove();
+  }, 52000);
+}
 // Project Stardust
 // No for loops I'll have to use setInterval() timeout and Animation Frames
 // 
